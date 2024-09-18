@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxon Profile</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" 
+        rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Taxon Profile for <%= taxon %></h1>
+
+        <h2>AOO Threats</h2>
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Threat</th>
+                    <th>Last Year</th>
+                    <th>Annual Rate</th>
+                    <th>p-Value</th>
+                    <th>R²</th>
+                    <th>Last Year Area (km²)</th>
+                    <th>Last Year Percentage (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% threats.AOO.forEach(function(aoo) { %>
+                    <tr>
+                        <td><%= aoo.threat %></td>
+                        <td><%= aoo.lastYear %></td>
+                        <td><%= aoo.trendAnalysis.annualRate %></td>
+                        <td><%= aoo.trendAnalysis.pValue %></td>
+                        <td><%= aoo.trendAnalysis.rSquared %></td>
+                        <td><%= aoo.lastYear_km2.toFixed(2) %></td>
+                        <td><%= aoo.lastYear_percentage.toFixed(2) %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <h2>EOO Threats</h2>
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Threat</th>
+                    <th>Last Year</th>
+                    <th>Annual Rate</th>
+                    <th>p-Value</th>
+                    <th>R²</th>
+                    <th>Last Year Area (km²)</th>
+                    <th>Last Year Percentage (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% threats.EOO.forEach(function(eoo) { %>
+                    <tr>
+                        <td><%= eoo.threat %></td>
+                        <td><%= eoo.lastYear %></td>
+                        <td><%= eoo.trendAnalysis.annualRate %></td>
+                        <td><%= eoo.trendAnalysis.pValue %></td>
+                        <td><%= eoo.trendAnalysis.rSquared %></td>
+                        <td><%= eoo.lastYear_km2.toFixed(2) %></td>
+                        <td><%= eoo.lastYear_percentage.toFixed(2) %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS (optional, for additional components like modals) -->
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
