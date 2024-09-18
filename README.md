@@ -18,6 +18,7 @@ The set of dependencies are:
 - [fuse.js](https://www.fusejs.io/)
 - [@turf/turf](https://www.npmjs.com/package/@turf/turf)
 - [@vicentecalfo/eoo-aoo-calc](https://www.npmjs.com/package/@vicentecalfo/eoo-aoo-calc)
+- [adm-zip](https://www.npmjs.com/package/adm-zip)
 - [@google/earthengine](https://www.npmjs.com/package/@google/earthengine)
 - [r-script](https://www.npmjs.com/package/r-script)
 - [ejs](https://www.npmjs.com/package/ejs)
