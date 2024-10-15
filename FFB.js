@@ -64,7 +64,7 @@ function generateCitation(howToCite, family, taxonId, date) {
             if (authorList.length === 1) {
                 return `${authorList[0]}, ${year}`
             } else if (authorList.length === 2) {
-                return `${authorList[0]} e ${authorList[1]}, ${year}`
+                return `${authorList[0]} and ${authorList[1]}, ${year}`
             } else {
                 return `${authorList[0]} et al., ${year}`
             }
