@@ -402,12 +402,12 @@ node taxonProfile-textProcessing
   {
     threat: '2.2.3 Scale Unknown/Unrecorded',
     text: 'In 2022, the species had 18.00% (4.32 km²) of its AOO converted into areas of forestry, an activity that has been growing at a rate of 1.30% per year from 1985 to 2021 [valor-p: 1.2176e-23; R²: 0.9404] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
+    reference: 'MapBiomas, 2022. MapBiomas Project - Collection 7 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   },
   {
     threat: '2.1.4 Scale Unknown/Unrecorded',
     text: 'In 2022, the species had 8.93% (2.14 km²) of its AOO converted into areas of soybean, an activity that has been growing at a rate of 0.48% per year from 1985 to 2021 [valor-p: 1.0240e-11; R²: 0.7279] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
+    reference: 'MapBiomas, 2022. MapBiomas Project - Collection 7 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   }
 ]
 ```
