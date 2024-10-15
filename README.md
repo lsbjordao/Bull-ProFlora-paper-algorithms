@@ -356,21 +356,21 @@ node threats-trendanalysis
 ```js
 [
   {
-    threat: 'silvicultura',
+    threat: 'forest plantation',
     lastYear: '2022',
     trendAnalysis: { annualRate: 1.3256, pValue: 1.7964e-21, rSquared: 0.9324 },
     lastYear_km2: 4.31939824302829,
     lastYear_percentage: 17.99749267928454
   },
   {
-    threat: 'mosaico de usos',
+    threat: 'mosaic of uses',
     lastYear: '2022',
     trendAnalysis: { annualRate: 0.1484, pValue: 0.1264, rSquared: 0.0637 },
     lastYear_km2: 2.572139705074356,
     lastYear_percentage: 10.71724877114315
   },
   {
-    threat: 'soja',
+    threat: 'soybean',
     lastYear: '2022',
     trendAnalysis: { annualRate: 0.4846, pValue: 1.024e-11, rSquared: 0.7279 },
     lastYear_km2: 2.1433431158448464,
@@ -396,18 +396,18 @@ node taxonProfile-textProcessing
 [
   {
     threat: '2.3.4 Scale Unknown/Unrecorded',
-    text: 'Em 2022, a espécie apresentava 10,72% (2,57 km²) da sua AOO convertidos em áreas de mosaico de usos, atividade que cresce a uma taxa de 0,15% aa desde 1985 até 2020 [valor-p: 1.2640e-1; R²: 0.0637] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (acesso em 18 de setembro de 2024).'
+    text: 'In 2022, the species had 10.72% (2.57 km²) of its AOO converted into areas of mosaic land use, an activity that has been growing at a rate of 0.15% per year from 1985 to 2021 [valor-p: 1.2640e-1; R²: 0.0637] (MapBiomas, 2022).',
+    reference: 'MapBiomas, 2022. MapBiomas Project - Collection 7 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   },
   {
     threat: '2.2.3 Scale Unknown/Unrecorded',
-    text: 'Em 2022, a espécie apresentava 18,00% (4,32 km²) da sua AOO convertidos em áreas de silvicultura, atividade que cresce a uma taxa de 1,30% aa desde 1985 até 2020 [valor-p: 1.2176e-23; R²: 0.9404] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (acesso em 18 de setembro de 2024).'
+    text: 'In 2022, the species had 18.00% (4.32 km²) of its AOO converted into areas of forestry, an activity that has been growing at a rate of 1.30% per year from 1985 to 2021 [valor-p: 1.2176e-23; R²: 0.9404] (MapBiomas, 2022).',
+    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   },
   {
     threat: '2.1.4 Scale Unknown/Unrecorded',
-    text: 'Em 2022, a espécie apresentava 8,93% (2,14 km²) da sua AOO convertidos em áreas de soja, atividade que cresce a uma taxa de 0,48% aa desde 1985 até 2020 [valor-p: 1.0240e-11; R²: 0.7279] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (acesso em 18 de setembro de 2024).'
+    text: 'In 2022, the species had 8.93% (2.14 km²) of its AOO converted into areas of soybean, an activity that has been growing at a rate of 0.48% per year from 1985 to 2021 [valor-p: 1.0240e-11; R²: 0.7279] (MapBiomas, 2022).',
+    reference: 'MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   }
 ]
 ```
@@ -426,6 +426,6 @@ node taxonProfile-view
 
 | Threat            | Last Year | Annual Rate | p-Value       | R²     | Last Year Area (km²) | Last Year Percentage (%) |
 |-------------------|-----------|-------------|---------------|--------|----------------------|--------------------------|
-| silvicultura       | 2022      | 1.2953      | 1.2176e-23    | 0.9404 | 4.32                 | 18.00                    |
-| mosaico de usos    | 2022      | 0.1484      | 0.1264        | 0.0637 | 2.57                 | 10.72                    |
-| soja              | 2022      | 0.4846      | 1.024e-11     | 0.7279 | 2.14                 | 8.93                     |
+| forest plantation       | 2022      | 1.2953      | 1.2176e-23    | 0.9404 | 4.32                 | 18.00                    |
+| mosaicof uses    | 2022      | 0.1484      | 0.1264        | 0.0637 | 2.57                 | 10.72                    |
+| soybean              | 2022      | 0.4846      | 1.024e-11     | 0.7279 | 2.14                 | 8.93                     |
