@@ -327,7 +327,7 @@ Each `areaKm2` object has this structure:
 {
   "groups": [
     {
-      "class": Integer, // An integer representing the MapBiomas land cover class
+      "class": Integer, // An integer representing the MapBiomas land cover and use class
       "sum": Float      // A decimal representing the total area in square kilometers
     },
     {
