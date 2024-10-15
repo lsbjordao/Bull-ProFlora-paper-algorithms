@@ -52,8 +52,8 @@ node ffb
   phytogeographicDomain: [ 'Cerrado' ],
   vernacularNames: [],
   citation: {
-    long: 'Flora and Fungi of Brazil, 2024. Fabaceae. Flora and Fungi of Brazil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/FB112007 (accessed on October 15, 2024).',
-    short: 'Flora e Funga do Brasil, 2024'
+    full: 'Flora and Fungi of Brazil, 2024. Fabaceae. Flora and Fungi of Brazil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/FB112007 (accessed on October 15, 2024).',
+    inText: 'Flora e Funga do Brasil, 2024'
   }
 }
 ```
