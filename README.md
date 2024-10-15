@@ -43,6 +43,7 @@ node ffb
 
 ```js
 {
+  taxon: 'Mimosa gracilis var. brevissima',
   lifeForm: [ 'Erva' ],
   habitat: [ 'Terrícola' ],
   vegetationType: [ 'Cerrado (lato sensu)' ],
@@ -51,7 +52,7 @@ node ffb
   phytogeographicDomain: [ 'Cerrado' ],
   vernacularNames: [],
   citation: {
-    long: 'Flora e Funga do Brasil, 2024. Fabaceae. Flora e Funga do Brasil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/FB112007 (acesso em 18 de setembro de 2024).',
+    long: 'Flora and Fungi of Brazil, 2024. Fabaceae. Flora and Fungi of Brazil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/FB112007 (accessed on October 15, 2024).',
     short: 'Flora e Funga do Brasil, 2024'
   }
 }
@@ -96,8 +97,8 @@ node ipni
 A script showing the start with a specimens dataset as a json and a method for filterings according to a selected flow:
 
 1. Open, the `records.js` file.
-2. Observe the constant `occs` at first line: it is an array of objects with properties `id`, `lat`, `lon`, `record`, and `SIG`, all threated as strings.
-3. Observe the constant `flowData` at line 9: it defines a hypothetic flow for the data: `flow` === `"PNA"`, `record` === `"x"`, and idem for `SIG` property.
+2. Observe the constant `occs` at first line: it is an array of objects with properties `id`, `lat`, `lon`, `record`, and `GIS`, all threated as strings.
+3. Observe the constant `flowData` at line 9: it defines a hypothetic flow for the data: `flow` === `"PNA"`, `record` === `"x"`, and idem for `GIS` property.
 4. Observe that after the filterings, the output to be generated is a [GeoJSON](https://geojson.org/).
 5. Run the script:
 
@@ -123,7 +124,7 @@ node records
       "properties": {
         "occId": "specimen1",
         "validationRecord": "valid",
-        "validationSIG": "valid"
+        "validationGIS": "valid"
       }
     },
     {
@@ -138,7 +139,7 @@ node records
       "properties": {
         "occId": "specimen5",
         "validationRecord": "valid",
-        "validationSIG": "valid"
+        "validationGIS": "valid"
       }
     }
   ]
@@ -316,6 +317,24 @@ node threats-oa
     { band: 'classification_2020', areaKm2: [Object] },
     { band: 'classification_2021', areaKm2: [Object] },
     { band: 'classification_2022', areaKm2: [Object] }
+  ]
+}
+```
+
+Each `areaKm2` object has this structure:
+
+```js
+{
+  "groups": [
+    {
+      "class": Integer, // An integer representing the MapBiomas land cover class
+      "sum": Float      // A decimal representing the total area in square kilometers
+    },
+    {
+      "class": Integer,
+      "sum": Float
+    }
+    // More objects with the same structure
   ]
 }
 ```

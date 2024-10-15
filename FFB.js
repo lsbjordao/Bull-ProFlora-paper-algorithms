@@ -26,14 +26,14 @@ async function searchInFFB(taxon) {
 }
 
 function generateCitation(howToCite, family, taxonId, date) {
-    function genLongCitation() {
+    function genfullCitation() {
 
         function formatDate(date) {
             const months = [
-                'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
-                'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+                'January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'
             ]
-            return `${date.getDate()} de ${months[date.getMonth()]} de ${date.getFullYear()}`
+            return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
         }
 
         const hasAuthorship = !/^Flora do Brasil/.test(howToCite)
@@ -43,20 +43,20 @@ function generateCitation(howToCite, family, taxonId, date) {
             const taxon = matchResult ? matchResult[1] : ''
             howToCite = howToCite.replace(/(.*)\sin Flora do Brasil.*/, '$1')
             howToCite = howToCite.replace(/\s\w+$/, '')
-            return `${howToCite}, ${date.getFullYear()}.${taxon}. Flora e Funga do Brasil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/${taxonId} (acesso em ${formatDate(date)}).`
+            return `${howToCite}, ${date.getFullYear()}.${taxon}. Flora and Fungi of Brazil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/${taxonId} (accessed on ${formatDate(date)}).`
         } else {
-            return `Flora e Funga do Brasil, ${date.getFullYear()}. ${family}. Flora e Funga do Brasil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/${taxonId} (acesso em ${formatDate(date)}).`
+            return `Flora and Fungi of Brazil, ${date.getFullYear()}. ${family}. Flora and Fungi of Brazil. Jardim Botânico do Rio de Janeiro. URL https://floradobrasil.jbrj.gov.br/${taxonId} (accessed on ${formatDate(date)}).`
         }
     }
 
-    function genShortCitation(longCitation) {
-        const yearMatch = longCitation.match(/\b\d{4}\b/)
+    function geninTextCitation(fullCitation) {
+        const yearMatch = fullCitation.match(/\b\d{4}\b/)
         const year = yearMatch ? yearMatch[0] : ''
 
-        if (longCitation.startsWith('Flora e Funga do Brasil')) {
-            return `Flora e Funga do Brasil, ${year}`
+        if (fullCitation.startsWith('Flora e Funga do Brasil')) {
+            return `Flora and Fungi of Brazil, ${year}`
         } else {
-            const authorsMatch = longCitation.match(/.*?\d{4}/)
+            const authorsMatch = fullCitation.match(/.*?\d{4}/)
             let authors = authorsMatch ? authorsMatch[0] : ''
             authors = authors.replace(/,?\s*\d{4}\b/, '')
             const authorList = authors.split(/,\s+[\w\.-]+,\s/).filter(Boolean).map(author => author.replace(/,\s[\w\.-]+\s*$/, ''))
@@ -71,12 +71,12 @@ function generateCitation(howToCite, family, taxonId, date) {
         }
     }
     
-    const longCitation = genLongCitation()
-    const shortCitation = genShortCitation(longCitation)
+    const fullCitation = genfullCitation()
+    const inTextCitation = geninTextCitation(fullCitation)
 
     return {
-        long: longCitation,
-        short: shortCitation
+        full: fullCitation,
+        inText: inTextCitation
     }
 }
 
@@ -110,7 +110,7 @@ async function fetchTaxonData(taxon) {
     const citation = generateCitation(howToCite, family, taxonId, date)
 
     return {
-        lifeForm, habitat, vegetationType, states, endemism, 
+        taxon, lifeForm, habitat, vegetationType, states, endemism, 
         phytogeographicDomain, vernacularNames, citation
     }
 }
