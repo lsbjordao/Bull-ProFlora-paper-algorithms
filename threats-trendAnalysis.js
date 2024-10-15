@@ -28,25 +28,25 @@ AOO.forEach(item => {
 
 // Mapping class numbers to labels
 const threats = {
-    "9": "Silvicultura",
-    "15": "Pastagem",
-    "18": "Agricultura",
-    "19": "Lavoura temporária",
-    "20": "Cana",
-    "21": "Mosaico de usos",
-    "24": "Área urbanizada",
-    "30": "Mineração",
-    "35": "Cultura de palma",
-    "36": "Lavoura perene",
-    "39": "Soja",
-    "40": "Arroz",
-    "41": "Outras lavouras temporárias",
-    "46": "Café",
+    "9": "Forest plantation",
+    "15": "Pasture",
+    "18": "Agriculture",
+    "19": "Temporary crop",
+    "20": "Sugar cane",
+    "21": "Mosaic of uses",
+    "24": "Urban area",
+    "30": "Mining",
+    "35": "Palm oil",
+    "36": "Perennial crop",
+    "39": "Soybean",
+    "40": "Rice",
+    "41": "Other temporary crops",
+    "46": "Coffee",
     "47": "Citrus",
-    "48": "Outras lavouras perenes",
-    "57": "Cultivos simples",
-    "58": "Cultivos múltiples",
-    "62": "Algodão"
+    "48": "Other perennial crops",
+    "57": "Simple crops",
+    "58": "Multiple crops",
+    "62": "Cotton"
 };
 
 const AooThreats = {};

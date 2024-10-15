@@ -4,51 +4,37 @@ const threatsFilePath = `./threats/${taxon}.json`;
 const threats = JSON.parse(fs.readFileSync(threatsFilePath, 'utf-8'));
 
 const threatsIUCN = {
-    silvicultura: '2.2.3 Scale Unknown/Unrecorded',
-    agropecuária: '2.3.4 Scale Unknown/Unrecorded',
-    pastagem: '2.3.4 Scale Unknown/Unrecorded',
-    agricultura: '2.1.4 Scale Unknown/Unrecorded',
-    'lavoura temporária': '2.1.4 Scale Unknown/Unrecorded',
-    cana: '2.1.4 Scale Unknown/Unrecorded',
-    'mosaico de usos': '2.3.4 Scale Unknown/Unrecorded',
-    'área urbanizada': '1.1 Housing & urban areas',
-    mineração: '3.2 Mining & quarrying',
-    'cultura de palma': '2.1.4 Scale Unknown/Unrecorded',
-    'lavoura perene': '2.1.4 Scale Unknown/Unrecorded',
-    soja: '2.1.4 Scale Unknown/Unrecorded',
-    arroz: '2.1.4 Scale Unknown/Unrecorded',
-    'outras lavouras temporárias': '2.1.4 Scale Unknown/Unrecorded',
-    café: '2.1.4 Scale Unknown/Unrecorded',
+    'forest plantation': '2.2.3 Scale Unknown/Unrecorded',
+    pasture: '2.3.4 Scale Unknown/Unrecorded',
+    agriculture: '2.1.4 Scale Unknown/Unrecorded',
+    'temporary crop': '2.1.4 Scale Unknown/Unrecorded',
+    'sugar cane': '2.1.4 Scale Unknown/Unrecorded',
+    'mosaic of uses': '2.3.4 Scale Unknown/Unrecorded',
+    'urban area': '1.1 Housing & urban areas',
+    mining: '3.2 Mining & quarrying',
+    'palm oil': '2.1.4 Scale Unknown/Unrecorded',
+    'perennial crop': '2.1.4 Scale Unknown/Unrecorded',
+    soybean: '2.1.4 Scale Unknown/Unrecorded',
+    rice: '2.1.4 Scale Unknown/Unrecorded',
+    'other temporary crops': '2.1.4 Scale Unknown/Unrecorded',
+    coffee: '2.1.4 Scale Unknown/Unrecorded',
     citrus: '2.1.4 Scale Unknown/Unrecorded',
-    'outras lavouras perenes': '2.1.4 Scale Unknown/Unrecorded',
-    'área urbana': '2.1.4 Scale Unknown/Unrecorded',
-    infraestrutura: '2.1.4 Scale Unknown/Unrecorded',
-    'outras áreas urbanizadas': '2.1.4 Scale Unknown/Unrecorded',
-    'cultivos simples': '2.1.4 Scale Unknown/Unrecorded',
-    'cultivos múltiples': '2.1.4 Scale Unknown/Unrecorded',
-    algodão: '2.1.4 Scale Unknown/Unrecorded',
+    'other perennial crops': '2.1.4 Scale Unknown/Unrecorded',
+    'simple crops': '2.1.4 Scale Unknown/Unrecorded',
+    'multiple crops': '2.1.4 Scale Unknown/Unrecorded',
+    cotton: '2.1.4 Scale Unknown/Unrecorded'
 };
 
 let today = new Date();
 const months = [
-    'janeiro',
-    'fevereiro',
-    'março',
-    'abril',
-    'maio',
-    'junho',
-    'julho',
-    'agosto',
-    'setembro',
-    'outubro',
-    'novembro',
-    'dezembro',
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
 ];
 const day = today.getDate();
 const month = months[today.getMonth()];
 const year = today.getFullYear();
 
-const date = `${day} de ${month} de ${year}`;
+const date = `${month} ${day}, ${year}`;
 
 const AooThreats = threats.AOO
 const AooThreatsList = [];
@@ -56,10 +42,8 @@ for (const threat of AooThreats) {
     const lastYear = threat.lastYear;
     const lastYearPercentage = threat.lastYear_percentage
         .toFixed(2)
-        .replace('.', ',');
     const lastYearKm2 = threat.lastYear_km2
         .toFixed(2)
-        .replace('.', ',');
     const annualRate = threat.trendAnalysis.annualRate
         .toFixed(2);
     const pValue = threat.trendAnalysis.pValue
@@ -70,25 +54,20 @@ for (const threat of AooThreats) {
 
     let annualRateLabel = ''
 
-    let threatText = `Em ${lastYear}, a espécie apresentava ${lastYearPercentage}% (${lastYearKm2} km²) da sua AOO convertidos em áreas de ${threatName}, atividade que apresenta tendência nula desde 1985 até 2020.`;
+    let threatText = `In ${lastYear}, the species had ${lastYearPercentage}% (${lastYearKm2} km²) of its AOO converted into areas of ${threatName}, an activity that has shown no trend from 1985 to 2022.`;
     if (annualRate > 0) {
         annualRateLabel = annualRate.replace('.', ',')
-        threatText = `Em ${lastYear}, a espécie apresentava ${lastYearPercentage}% (${lastYearKm2} km²) da sua AOO convertidos em áreas de ${threatName}, atividade que cresce a uma taxa de ${annualRateLabel}% aa desde 1985 até 2020 [valor-p: ${pValue}; R²: ${rSquared}].`;
+        threatText = `In ${lastYear}, the species had ${lastYearPercentage}% (${lastYearKm2} km²) of its AOO converted into areas of ${threatName}, an activity that has been growing at a rate of ${annualRateLabel}% per year from 1985 to 2022 [p-value: ${pValue}; R²: ${rSquared}].`;
     }
     if (annualRate < 0) {
         annualRateLabel = annualRate.replace('.', ',')
-        threatText = `Em ${lastYear}, a espécie apresentava ${lastYearPercentage}% (${lastYearKm2} km²) da sua AOO convertidos em áreas de ${threatName}, atividade que diminui a uma taxa de ${annualRateLabel}% aa desde 1985 até 2020 [valor-p: ${pValue}; R²: ${rSquared}].`;
+        threatText = `In ${lastYear}, the species had ${lastYearPercentage}% (${lastYearKm2} km²) of its AOO converted into areas of ${threatName}, an activity that has been decreasing at a rate of ${annualRateLabel}% per year from 1985 to 2022 [p-value: ${pValue}; R²: ${rSquared}].`;
     }
-
-    threatText = threatText.replace(
-        'áreas de área urbanizada',
-        'área urbanizada',
-    );
 
     const AooThreatInfo = {
         threat: threatsIUCN[threatName],
-        text: threatText.replace(/\.$/, ' (MapBiomas, 2022).'),
-        reference: `MapBiomas, 2022. Projeto MapBiomas - Coleção 7 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, dados de 1985 e 2021. URL https://https://mapbiomas.org (acesso em ${date}).`
+        text: threatText.replace(/\.$/, ' (MapBiomas, 2023).'),
+        reference: `MapBiomas, 2023. MapBiomas Project - Collection 8 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2022. URL https://https://mapbiomas.org (accessed on ${date}).`
     };
     AooThreatsList.push(AooThreatInfo);
 }

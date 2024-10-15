@@ -396,18 +396,18 @@ node taxonProfile-textProcessing
 [
   {
     threat: '2.3.4 Scale Unknown/Unrecorded',
-    text: 'In 2022, the species had 10.72% (2.57 km²) of its AOO converted into areas of mosaic land use, an activity that has been growing at a rate of 0.15% per year from 1985 to 2021 [valor-p: 1.2640e-1; R²: 0.0637] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. MapBiomas Project - Collection 7 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
+    text: 'In 2022, the species had 10.72% (2.57 km²) of its AOO converted into areas of mosaic land use, an activity that has been growing at a rate of 0.15% per year from 1985 to 2022 [valor-p: 1.2640e-1; R²: 0.0637] (MapBiomas, 2023).',
+    reference: 'MapBiomas, 2023. MapBiomas Project - Collection 8 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2022. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   },
   {
     threat: '2.2.3 Scale Unknown/Unrecorded',
-    text: 'In 2022, the species had 18.00% (4.32 km²) of its AOO converted into areas of forestry, an activity that has been growing at a rate of 1.30% per year from 1985 to 2021 [valor-p: 1.2176e-23; R²: 0.9404] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. MapBiomas Project - Collection 7 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
+    text: 'In 2022, the species had 18.00% (4.32 km²) of its AOO converted into areas of forestry, an activity that has been growing at a rate of 1.30% per year from 1985 to 2022 [valor-p: 1.2176e-23; R²: 0.9404] (MapBiomas, 2023).',
+    reference: 'MapBiomas, 2023. MapBiomas Project - Collection 8 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2022. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   },
   {
     threat: '2.1.4 Scale Unknown/Unrecorded',
-    text: 'In 2022, the species had 8.93% (2.14 km²) of its AOO converted into areas of soybean, an activity that has been growing at a rate of 0.48% per year from 1985 to 2021 [valor-p: 1.0240e-11; R²: 0.7279] (MapBiomas, 2022).',
-    reference: 'MapBiomas, 2022. MapBiomas Project - Collection 7 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
+    text: 'In 2022, the species had 8.93% (2.14 km²) of its AOO converted into areas of soybean, an activity that has been growing at a rate of 0.48% per year from 1985 to 2021 [valor-p: 1.0240e-11; R²: 0.7279] (MapBiomas, 2023).',
+    reference: 'MapBiomas, 2023. MapBiomas Project - Collection 8 of the Annual Series of Land Cover and Use Maps of Brazil, data from 1985 to 2021. URL https://https://mapbiomas.org (accessed on August 21, 2024).'
   }
 ]
 ```
