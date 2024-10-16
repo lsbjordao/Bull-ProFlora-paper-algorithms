@@ -27,9 +27,9 @@ The set of dependencies are:
 
 ## Information
 
-This ETL process fetches relevant data about taxa and transforms the response into a structured, readable format.
+This ETL (Extract, Transform, Load) process fetches relevant data about taxa and transforms the response into a structured, readable format.
 
-### FFB
+### Flora and Fungi of Brazil (FFB)
 
 Fetching data from [Flora and Fungi of Brazil](https://floradobrasil.jbrj.gov.br/):
 
