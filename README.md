@@ -10,6 +10,8 @@ Installing Git [https://git-scm.com/](https://git-scm.com/) is essential to clon
 
 ## Installation
 
+After cloning and opening the project, install all the required packages.
+
 All the required packages for this project are listed in the `package.json` file. To install them, simply run `npm install`.
 
 The set of dependencies are:
