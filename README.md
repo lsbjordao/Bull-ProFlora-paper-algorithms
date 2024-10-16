@@ -1,6 +1,6 @@
 # Bull-ProFlora Paper Algorithms
 
-This collection of scripts supports the paper currently under peer review. It demonstrates key methods for retrieving and generating data used in the assessment of plant species extinction risk.
+This JavaScript script collection supports the paper currently under peer review. It demonstrates key methods for retrieving and generating data used in the assessment of plant species extinction risk. To run these scripts, Node.js is required [https://nodejs.org/](https://nodejs.org/).
 
 ## Clone this repository
 
