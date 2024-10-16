@@ -31,7 +31,7 @@ This ETL (Extract, Transform, Load) process fetches relevant data about taxa and
 
 ### Flora and Fungi of Brazil (FFB)
 
-Fetching data from [Flora and Fungi of Brazil](https://floradobrasil.jbrj.gov.br/):
+Fetching data from [FFB](https://floradobrasil.jbrj.gov.br/):
 
 1. Open, the `FFB.js` file.
 2. Observe the constant `taxon` at line 120: it is declared as `'Mimosa gracilis var. brevissima'`. This can be edited freely to test different entries.
