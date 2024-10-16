@@ -4,6 +4,8 @@ This JavaScript script collection supports the paper currently under peer review
 
 ## Clone this repository
 
+Installing Git [https://git-scm.com/](https://git-scm.com/) is essential to clone this repository:
+
 `https://github.com/lsbjordao/Bull-ProFlora-paper-algorithms`
 
 ## Installation
