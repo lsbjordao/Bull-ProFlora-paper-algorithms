@@ -424,7 +424,7 @@ node taxonProfile-textProcessing
 node taxonProfile-view
 ```
 
-4. The outcome is an HTML file, which can be opened, with a table rendered dinamically according with the json loaded:
+4. The outcome is an HTML file, which can be opened, with a table rendered dinamically according with the json loaded, similar to the following:
 
 | Threat            | Last Year | Annual Rate | p-Value       | R²     | Last Year Area (km²) | Last Year Percentage (%) |
 |-------------------|-----------|-------------|---------------|--------|----------------------|--------------------------|
